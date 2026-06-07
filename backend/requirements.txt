@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+sqlalchemy
+scapy
+psutil
+python-dotenv
+websockets
