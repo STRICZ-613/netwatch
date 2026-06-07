@@ -3,7 +3,7 @@ import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base
-from routers import devices, logs
+from routers import devices, logs, ports 
 
 # 1. Configuration des logs pour suivre la vie de notre API
 logging.basicConfig(level=logging.INFO)
@@ -35,6 +35,7 @@ app.add_middleware(
 # 5. Inclusion de tes deux super routeurs
 app.include_router(devices.router)
 app.include_router(logs.router)
+app.include_router(ports.router)
 
 # 6. Petite route d'accueil pour tester rapidement si l'API est vivante
 @app.get("/", tags=["Racine"])
