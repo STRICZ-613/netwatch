@@ -1,7 +1,4 @@
-"""
-Configuration module for NetWatch backend.
-Controls real vs simulation mode and network scanning parameters.
-"""
+
 
 import os
 from dotenv import load_dotenv
